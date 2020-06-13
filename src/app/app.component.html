@@ -1,13 +1,20 @@
 <h1>Angular Forms</h1>
-<form #greetingForm="ngForm" (submit)="displayGreeting(greetingForm,greetingInput)">
+<form #greetingForm="ngForm" (submit)="displayGreeting(greetingForm, greetingInput)">
   <input type="text"
     placeholder="Who are you?"
     [(ngModel)]="greeting"
     name="greeting"
     required 
     #greetingInput="ngModel" />
+    <pre>
+    dirty: {{greetingInput.dirty}}
+    pristine: {{greetingInput.pristine}}
+    touched: {{greetingInput.touched}}
+    untouched: {{greetingInput.untouched}}
+    </pre>
     <p *ngIf="greetingInput.invalid && greetingInput.dirty">Name is required</p>
     <button [disabled]="greetingForm.invalid" type="submit">Submit</button>
+   
 </form>
 <p *ngIf="displayedGreeting">
   Hello {{ displayedGreeting }}

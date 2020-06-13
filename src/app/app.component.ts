@@ -15,7 +15,7 @@ export class AppComponent {
     if (form.valid) {
       this.displayedGreeting = this.greeting;
       //console.log(form);
-      console.log(text);
+      //console.log(text);
     }
   }
 }
