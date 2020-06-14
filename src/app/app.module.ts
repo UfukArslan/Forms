@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, NotInValidatorDirective
   ],
   imports: [
-    BrowserModule, FormsModule, NotInValidatorDirective
+    BrowserModule, FormsModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
