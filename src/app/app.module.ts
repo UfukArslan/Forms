@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent, NotInValidatorDirective
+    AppComponent, NotInValidatorDirective,
   ],
   imports: [
     BrowserModule, FormsModule, 

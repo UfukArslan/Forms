@@ -14,12 +14,12 @@
     untouched: {{greetingInput.untouched}}
     {{ greetingInput.errors | json }}
   </pre>-->
-  <p *ngIf="greetingInput.hasError('required') && greetingInput.dirty">
-    Name is required
-  </p>
-  <p *ngIf="greetingInput.hasError('notIn') && greetingInput.dirty">
-    Name is forbidden
-  </p>
+    <p *ngIf="greetingInput.hasError('required') && greetingInput.dirty">
+  Name is required
+</p>
+<p *ngIf="greetingInput.hasError('notIn') && greetingInput.dirty">
+  Name is forbidden
+</p>
     <button [disabled]="greetingForm.invalid" type="submit">Submit</button>
 </form>
 <p *ngIf="displayedGreeting">
