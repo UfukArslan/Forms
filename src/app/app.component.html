@@ -5,17 +5,21 @@
     [(ngModel)]="greeting"
     name="greeting"
     required 
-    #greetingInput="ngModel" />
-    <pre>
+    #greetingInput="ngModel" 
+    [notIn]="['Bob']"/>
+    <!--<pre>
     dirty: {{greetingInput.dirty}}
     pristine: {{greetingInput.pristine}}
     touched: {{greetingInput.touched}}
     untouched: {{greetingInput.untouched}}
-    </pre>
+    {{ greetingInput.errors | json }}
+  </pre>-->
     <p *ngIf="greetingInput.invalid && greetingInput.dirty">Name is required</p>
     <button [disabled]="greetingForm.invalid" type="submit">Submit</button>
-   
 </form>
 <p *ngIf="displayedGreeting">
   Hello {{ displayedGreeting }}
 </p>
+
+
+

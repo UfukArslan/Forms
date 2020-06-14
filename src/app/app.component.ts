@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm, NgModel } from '@angular/forms';
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,8 +15,8 @@ export class AppComponent {
   displayGreeting(form: NgForm, text: NgModel) {
     if (form.valid) {
       this.displayedGreeting = this.greeting;
-      //console.log(form);
-      //console.log(text);
+      console.log(form);
+      console.log(text);
     }
   }
 }
